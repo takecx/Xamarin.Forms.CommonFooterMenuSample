@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage BackgroundColor="Teal" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Xamarin.Forms.CommonFrameSample" xmlns:vm="clr-namespace:Xamarin.Forms.CommonFrameSample.ViewModels" x:Class="Xamarin.Forms.CommonFrameSample.Views.MainPage" Title="{Binding Title}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Xamarin.Forms.CommonFrameSample" xmlns:vm="clr-namespace:Xamarin.Forms.CommonFrameSample.ViewModels" x:Class="Xamarin.Forms.CommonFrameSample.Views.MainPage" Title="{Binding Title}">
 	<local:CommonFrame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-		<local:CommonFrame.MainContent>
-			<Label Text="Content-1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+		<local:CommonFrame.MainContent >
+			<Label Text="Content-1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Teal"/>
 		</local:CommonFrame.MainContent>
 		<local:CommonFrame.FooterMenu>
 			<local:menu1/>

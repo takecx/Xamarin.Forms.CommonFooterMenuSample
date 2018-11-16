@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin.Forms.CommonFrameSample.Menu3">
+	<ContentView.Content>
+		<AbsoluteLayout>
+			<Button x:Name="popupButton" Text="POPUP" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,0,0.2,1" Clicked="PopupButton_Clicked" HorizontalOptions="CenterAndExpand" />
+			<AbsoluteLayout x:Name="footerMenu" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" IsVisible="false">
+				<Button Text="A" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,0,0.2,0.23"  HorizontalOptions="CenterAndExpand"/>
+				<Button Text="B" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,0.23,0.2,0.23"  HorizontalOptions="CenterAndExpand"/>
+				<Button Text="C" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,0.46,0.2,0.23"  HorizontalOptions="CenterAndExpand"/>
+				<Grid BackgroundColor="Silver" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,1,1,0.3">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="1*" />
+						<ColumnDefinition Width="1*" />
+						<ColumnDefinition Width="1*" />
+						<ColumnDefinition Width="1*" />
+					</Grid.ColumnDefinitions>
+					<Button Grid.Column="0" Text="1" Clicked="Button1_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray" />
+					<Button Grid.Column="1" Text="2" Clicked="Button2_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray" />
+					<Button Grid.Column="2" Text="3" Clicked="Button3_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray" />
+					<Button Grid.Column="3" Text="4" Clicked="Button4_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray" />
+				</Grid>
+			</AbsoluteLayout>
+		</AbsoluteLayout>
+	</ContentView.Content>
+</ContentView>
