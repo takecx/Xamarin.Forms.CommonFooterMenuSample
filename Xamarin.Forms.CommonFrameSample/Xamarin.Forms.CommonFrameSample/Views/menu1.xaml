@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin.Forms.CommonFrameSample.menu1">
+	<ContentView.Content>
+		<Grid BackgroundColor="Silver">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*" />
+				<ColumnDefinition Width="1*" />
+				<ColumnDefinition Width="1*" />
+				<ColumnDefinition Width="1*" />
+			</Grid.ColumnDefinitions>
+			<Button Grid.Column="0" Text="1" Clicked="Button1_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray"/>
+			<Button Grid.Column="1" Text="2" Clicked="Button2_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray"/>
+			<Button Grid.Column="2" Text="3" Clicked="Button3_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray"/>
+			<Button Grid.Column="3" Text="4" Clicked="Button4_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray"/>
+		</Grid>
+	</ContentView.Content>
+</ContentView>

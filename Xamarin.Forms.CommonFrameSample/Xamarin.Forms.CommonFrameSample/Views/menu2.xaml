@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin.Forms.CommonFrameSample.menu2">
+	<ContentView.Content>
+		<Grid BackgroundColor="Silver">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*"/>
+				<ColumnDefinition Width="1*"/>
+			</Grid.ColumnDefinitions>
+			<Button Grid.Column="0" Text="Prev" BackgroundColor="Gray"/>
+			<Button Grid.Column="1" Text="Next" BackgroundColor="Gray"/>
+		</Grid>
+	</ContentView.Content>
+</ContentView>

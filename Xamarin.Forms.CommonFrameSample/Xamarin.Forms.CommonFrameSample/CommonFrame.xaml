@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="Xamarin.Forms.CommonFrameSample.CommonFrame"
+			 x:Name="_parent">
+	<ContentView.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<ContentPresenter Content="{Binding Path=MainContent,Source={x:Reference _parent}}" Grid.Row="0"/>
+			<ContentPresenter Content="{Binding Path=FooterMenu,Source={x:Reference _parent}}" Grid.Row="1"/>
+		</Grid>
+	</ContentView.Content>
+</ContentView>
