@@ -11,5 +11,10 @@ namespace Xamarin.Forms.CommonFrameSample
 		{
 			InitializeComponent();
 		}
+
+		void Handle_Tapped(object sender, System.EventArgs e)
+		{
+			popupMenu.HideFooterMenu();
+		}
 	}
 }

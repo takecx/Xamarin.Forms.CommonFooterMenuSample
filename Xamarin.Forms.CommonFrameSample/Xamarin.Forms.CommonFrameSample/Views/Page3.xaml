@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns:local="clr-namespace:Xamarin.Forms.CommonFrameSample" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin.Forms.CommonFrameSample.Page3">
 	<ContentPage.Content>
-		<local:CommonFrame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" MainContentBounds="0,0,1,1" FooterMenuBounds="0,1,1,0.4">
-			<local:CommonFrame.MainContent>
-				<Label Text="Content-4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Lime" />
-			</local:CommonFrame.MainContent>
-			<local:CommonFrame.FooterMenu>
-				<local:Menu3 />
-			</local:CommonFrame.FooterMenu>
-		</local:CommonFrame>
+		<Grid>
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="Handle_Tapped" />
+			</Grid.GestureRecognizers>
+			<local:CommonFrame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" MainContentBounds="0,0,1,1" FooterMenuBounds="0,1,1,0.4">
+				<local:CommonFrame.MainContent>
+					<Label Text="Content-4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Lime">
+					</Label>
+				</local:CommonFrame.MainContent>
+				<local:CommonFrame.FooterMenu>
+					<local:Menu3 x:Name="popupMenu" />
+				</local:CommonFrame.FooterMenu>
+			</local:CommonFrame>
+		</Grid>
 	</ContentPage.Content>
 </ContentPage>

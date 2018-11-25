@@ -24,6 +24,21 @@ namespace Xamarin.Forms.CommonFrameSample
 			}
 		}
 
+		/// <summary>
+		/// Hides the footer menu.
+		/// </summary>
+		public async void HideFooterMenu()
+		{
+			if (footerMenu.IsVisible == true)
+			{
+				await footerMenu.TranslateTo(0, 0, 0);
+				await footerMenu.TranslateTo(0, footerMenu.Height, 300);
+				footerMenu.IsVisible = false;
+
+				popupButton.IsVisible = true;
+			}
+		}
+
 		void Button1_Clicked(object sender, System.EventArgs e)
 		{
 			//if(_ViewName != nameof(MainPage))
