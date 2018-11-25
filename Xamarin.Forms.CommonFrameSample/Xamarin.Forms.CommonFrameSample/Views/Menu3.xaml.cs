@@ -5,21 +5,38 @@ using Xamarin.Forms.CommonFrameSample.Views;
 
 namespace Xamarin.Forms.CommonFrameSample
 {
-	public partial class menu1 : ContentView
+	public partial class Menu3 : ContentView
 	{
-		//	private string _ViewName;
-		//	public static readonly BindableProperty ViewNameProperty =
-		//BindableProperty.Create(nameof(MainContent), typeof(View), typeof(CommonFrame));
-
-		//public View MainContent
-		//{
-		//	get { return (View)GetValue(MainContentProperty); }
-		//	set { SetValue(MainContentProperty, value); }
-		//}
-
-		public menu1()
+		public Menu3()
 		{
 			InitializeComponent();
+		}
+
+		async void PopupButton_Clicked(object sender, System.EventArgs e)
+		{
+			if (footerMenu.IsVisible == false)
+			{
+				await footerMenu.TranslateTo(0, footerMenu.Height, 0);
+				footerMenu.IsVisible = !footerMenu.IsVisible;
+				await footerMenu.TranslateTo(0, 0, 300);
+
+				popupButton.IsVisible = false;
+			}
+		}
+
+		/// <summary>
+		/// Hides the footer menu.
+		/// </summary>
+		public async void HideFooterMenu()
+		{
+			if (footerMenu.IsVisible == true)
+			{
+				await footerMenu.TranslateTo(0, 0, 0);
+				await footerMenu.TranslateTo(0, footerMenu.Height, 300);
+				footerMenu.IsVisible = false;
+
+				popupButton.IsVisible = true;
+			}
 		}
 
 		void Button1_Clicked(object sender, System.EventArgs e)
@@ -39,5 +56,6 @@ namespace Xamarin.Forms.CommonFrameSample
 		{
 			Application.Current.MainPage.Navigation.PushAsync(new Page3());
 		}
+
 	}
 }
